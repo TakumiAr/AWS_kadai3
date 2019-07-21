@@ -37,7 +37,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'dotenv-rails'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'unicorn' # アプリケーションサーバのunicorn
-gem 'mini_racer', platforms: :ruby
+gem 'mini_racer', '>= 0.2.1', platforms: :ruby
 gem 'bcrypt', '~> 3.1.7'
 
 group :development, :test do
