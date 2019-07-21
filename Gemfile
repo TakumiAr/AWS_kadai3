@@ -38,9 +38,14 @@ gem 'dotenv-rails'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'unicorn' # アプリケーションサーバのunicorn
 gem 'mini_racer', platforms: :ruby # デプロイ時に必要
+gem 'bcrypt', '~> 3.1.7'
 
 group :development, :test do
-  gem 'capistrano', '3.6.0'
+  gem 'capistrano', '3.6.0' # capistranoのツール一式
+  gem 'capistrano-bundler'
+  gem 'capistrano-rails'
+  gem 'capistrano-rbenv'
+  gem 'capistrano3-unicorn'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
@@ -52,6 +57,8 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'ed25519', '>=1.2', '< 2.0'
+  gem 'bcrypt_pbkdf', '>= 1.0', '< 2.0'
 end
 
 group :test do
